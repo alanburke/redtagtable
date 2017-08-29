@@ -7,125 +7,155 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <!-- Datatables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.15/fh-3.1.2/r-2.1.1/datatables.min.css"/>
+
+
+    <!-- custom style -->
+    <style>
+    </style>
+
   </head>
   <body>
-		<div class="container">
-    <h1>Hello, world!</h1>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="text-center">GaelForce Women's Adventure Race</h1>
+      </div>
+    <!-- Sample Result table -->
+    <table id="results" class="table table-striped table-hover table-sm">
 
-		<!-- Sample Result table -->
-		<table id="results" class="table table-striped table-hover table-sm">
+      <thead class="thead-inverse">
+        <tr><th>Place</th><th>Number</th><th>Name</th><th>Surname</th><th>Cat</th><th>Run</th><th>Cycle</th><th>To Kayak</th><th>Kayak</th><th>Run</th><th>Finish</th></tr>
+      </thead>
 
-			<thead class="thead-inverse">
-				<tr><th>Place</th><th>Number</th><th>Name</th><th>Surname</th><th>Cat</th><th>Run</th><th>Cycle</th><th>To Kayak</th><th>Kayak</th><th>Run</th><th>Finish</th></tr>
-			</thead>
+      <tfoot>
+        <tr><th>Place</th><th>Number</th><th>Name</th><th>Surname</th><th>Cat</th><th>Run</th><th>Cycle</th><th>To Kayak</th><th>Kayak</th><th>Run</th><th>Finish</th></tr>
+      </tfoot>
 
-			<tfoot>
-				<tr><th>Place</th><th>Number</th><th>Name</th><th>Surname</th><th>Cat</th><th>Run</th><th>Cycle</th><th>To Kayak</th><th>Kayak</th><th>Run</th><th>Finish</th></tr>
-			</tfoot>
+      <tbody>
+        <tr><td>1</td><td>100</td><td>Noleen </td><td><strong>O'Neill</strong></td><td class="text-secondary">Over40</td><td>0:48:08</td><td>0:51:10</td><td><small>0:07:47</small></td><td>0:04:05</td><td>0:06:59</td><td><strong>1:58:09</strong></td></tr>
+        <tr><td>2</td><td>43</td><td>Caroline</td><td>Gibbons</td><td>Senior</td><td>0:47:55</td><td>0:52:59</td><td>0:07:08</td><td>0:04:14</td><td>0:06:46</td><td>1:59:02</td></tr>
+        <tr><td>3</td><td>75</td><td>Amy</td><td>McCarter</td><td>Senior</td><td>0:51:54</td><td>0:48:55</td><td>0:08:37</td><td>0:03:41</td><td>0:07:28</td><td>2:00:35</td></tr>
+        <tr><td>4</td><td>105</td><td>Siobhan</td><td>Reynolds</td><td>Over40</td><td>0:50:42</td><td>0:50:09</td><td>0:08:37</td><td>0:03:40</td><td>0:07:47</td><td>2:00:55</td></tr>
+        <tr><td>5</td><td>52</td><td>Marcella</td><td>Heneghan</td><td>Over40</td><td>0:46:28</td><td>0:56:29</td><td>0:07:51</td><td>0:03:39</td><td>0:06:45</td><td>2:01:12</td></tr>
+        <tr><td>6</td><td>66</td><td>Janette</td><td>Maguire</td><td>Senior</td><td>0:50:07</td><td>0:53:16</td><td>0:08:26</td><td>0:04:05</td><td>0:06:54</td><td>2:02:48</td></tr>
+        <tr><td>7</td><td>25</td><td>Roisin</td><td>Daly</td><td>Senior</td><td>0:52:05</td><td>0:50:32</td><td>0:08:16</td><td>0:04:28</td><td>0:07:44</td><td>2:03:05</td></tr>
+        <tr><td>8</td><td>97</td><td>Kate</td><td>O'flynn </td><td>Senior</td><td>0:50:30</td><td>0:53:40</td><td>0:08:21</td><td>0:03:21</td><td>0:07:43</td><td>2:03:35</td></tr>
+        <tr><td>9</td><td>45</td><td>Claire </td><td>Gillespie </td><td>Senior</td><td>0:50:33</td><td>0:53:33</td><td>0:08:23</td><td>0:03:25</td><td>0:07:43</td><td>2:03:37</td></tr>
+        <tr><td>10</td><td>57</td><td>Fiona </td><td>Hyland</td><td>Senior</td><td>0:51:20</td><td>0:51:24</td><td>0:08:58</td><td>0:04:17</td><td>0:08:02</td><td>2:04:01</td></tr>
+        <tr><td>11</td><td>125</td><td>Melissa</td><td>Kelly</td><td>Over40</td><td>0:49:52</td><td>0:54:36</td><td>0:08:19</td><td>0:05:34</td><td>0:07:43</td><td>2:06:04</td></tr>
+        <tr><td>12</td><td>71</td><td>leone</td><td>marron</td><td>Senior</td><td>0:51:23</td><td>0:55:16</td><td>0:08:35</td><td>0:04:34</td><td>0:08:07</td><td>2:07:55</td></tr>
+        <tr><td>13</td><td>111</td><td>Claire</td><td>Scully</td><td>Over40</td><td>0:53:24</td><td>0:54:26</td><td>0:08:45</td><td>0:04:21</td><td>0:07:46</td><td>2:08:42</td></tr>
+        <tr><td>14</td><td>11</td><td>Deirdre</td><td>Clarke</td><td>Senior</td><td>0:54:42</td><td>0:53:12</td><td>0:08:45</td><td>0:04:20</td><td>0:08:30</td><td>2:09:29</td></tr>
+        <tr><td>15</td><td>98</td><td>Claire</td><td>O'Grady</td><td>Senior</td><td>0:50:35</td><td>1:01:31</td><td>0:08:41</td><td>0:04:46</td><td>0:07:09</td><td>2:12:42</td></tr>
+        <tr><td>16</td><td>92</td><td>Aoife</td><td>O Malley</td><td>Senior</td><td>0:53:22</td><td>0:59:23</td><td>0:08:48</td><td>0:03:59</td><td>0:07:58</td><td>2:13:30</td></tr>
+        <tr><td>17</td><td>69</td><td>Kaidi</td><td>Mannik</td><td>Senior</td><td>0:55:14</td><td>0:56:55</td><td>0:08:39</td><td>0:05:08</td><td>0:07:43</td><td>2:13:39</td></tr>
+        <tr><td>18</td><td>91</td><td>Aoife</td><td>O Hara</td><td>Senior</td><td>0:56:00</td><td>0:56:16</td><td>0:09:14</td><td>0:04:00</td><td>0:08:12</td><td>2:13:42</td></tr>
+        <tr><td>19</td><td>33</td><td>Kate</td><td>Fitzgerald</td><td>Over40</td><td>0:53:27</td><td>0:58:44</td><td>0:09:16</td><td>0:04:49</td><td>0:07:32</td><td>2:13:48</td></tr>
+        <tr><td>20</td><td>123</td><td>Nikola</td><td>Chromeckova</td><td>Senior</td><td>0:56:34</td><td>0:53:35</td><td>0:10:24</td><td>0:04:31</td><td>0:09:05</td><td>2:14:09</td></tr>
+        <tr><td>21</td><td>79</td><td>Leona</td><td>McLoughlin</td><td>Senior</td><td>0:51:26</td><td>1:00:48</td><td>0:09:09</td><td>0:04:58</td><td>0:07:59</td><td>2:14:20</td></tr>
+        <tr><td>22</td><td>44</td><td>Nicole</td><td>Gibbs </td><td>Senior</td><td>0:53:01</td><td>1:00:39</td><td>0:09:10</td><td>0:03:35</td><td>0:08:16</td><td>2:14:41</td></tr>
+        <tr><td>23</td><td>124</td><td>Ewelina</td><td>Dzikowska</td><td>Senior</td><td>0:53:40</td><td>0:58:23</td><td>0:10:38</td><td>0:03:38</td><td>0:09:28</td><td>2:15:47</td></tr>
+        <tr><td>24</td><td>21</td><td>Patricia </td><td>Coyle</td><td>Over40</td><td>1:00:54</td><td>0:53:58</td><td>0:09:18</td><td>0:04:08</td><td>0:07:33</td><td>2:15:51</td></tr>
+        <tr><td>25</td><td>8</td><td>Kelly Ann</td><td>Carney</td><td>Senior</td><td>0:51:33</td><td>1:02:55</td><td>0:09:07</td><td>0:04:57</td><td>0:07:29</td><td>2:16:01</td></tr>
+        <tr><td>26</td><td>36</td><td>Rebecca</td><td>Flanagan</td><td>Senior</td><td>0:51:41</td><td>1:02:45</td><td>0:09:13</td><td>0:05:06</td><td>0:07:37</td><td>2:16:22</td></tr>
+        <tr><td>27</td><td>51</td><td>Claire </td><td>Heffernan</td><td>Over40</td><td>0:59:13</td><td>0:54:44</td><td>0:10:02</td><td>0:04:19</td><td>0:09:57</td><td>2:18:15</td></tr>
+        <tr><td>28</td><td>58</td><td>Aoife </td><td>Kavanagh</td><td>Senior</td><td>0:56:36</td><td>0:57:54</td><td>0:12:18</td><td>0:06:23</td><td>0:08:48</td><td>2:21:59</td></tr>
+        <tr><td>29</td><td>20</td><td>Sarah</td><td>Costello</td><td>Senior</td><td>0:57:16</td><td>1:00:50</td><td>0:10:09</td><td>0:05:06</td><td>0:08:40</td><td>2:22:01</td></tr>
+        <tr><td>30</td><td>72</td><td>Aisling</td><td>Martyn</td><td>Senior</td><td>0:53:42</td><td>1:06:36</td><td>0:10:05</td><td>0:04:20</td><td>0:07:56</td><td>2:22:39</td></tr>
+        <tr><td>31</td><td>7</td><td>Julia</td><td>Calderwood</td><td>Senior</td><td>0:59:51</td><td>0:59:23</td><td>0:09:56</td><td>0:04:28</td><td>0:09:06</td><td>2:22:44</td></tr>
+        <tr><td>32</td><td>110</td><td>Danielle</td><td>Scally</td><td>Senior</td><td>0:57:20</td><td>1:02:11</td><td>0:10:20</td><td>0:04:34</td><td>0:08:39</td><td>2:23:04</td></tr>
+        <tr><td>33</td><td>126</td><td>Tracy</td><td>McLoughlin</td><td>Senior</td><td>0:59:31</td><td>0:59:37</td><td>0:10:45</td><td>0:04:42</td><td>0:08:40</td><td>2:23:15</td></tr>
+        <tr><td>34</td><td>18</td><td>SIle</td><td>Corish</td><td>Over40</td><td>1:01:25</td><td>0:54:29</td><td>0:12:23</td><td>0:05:17</td><td>0:10:18</td><td>2:23:52</td></tr>
+        <tr><td>35</td><td>17</td><td>sinead</td><td>corbett</td><td>Senior</td><td>0:57:14</td><td>1:02:12</td><td>0:10:36</td><td>0:04:40</td><td>0:09:17</td><td>2:23:59</td></tr>
+        <tr><td>36</td><td>116</td><td>Tara</td><td>Healy</td><td>Over40</td><td>0:56:39</td><td>1:06:44</td><td>0:08:30</td><td>0:06:01</td><td>0:07:46</td><td>2:25:40</td></tr>
+        <tr><td>37</td><td>14</td><td>Grainne </td><td>Connaire </td><td>Senior</td><td>0:50:38</td><td>1:11:53</td><td>0:09:31</td><td>0:05:47</td><td>0:08:06</td><td>2:25:55</td></tr>
+        <tr><td>38</td><td>63</td><td>Sofia</td><td>Lasson</td><td>Senior</td><td>1:00:05</td><td>1:00:27</td><td>0:10:25</td><td></td><td>0:15:36</td><td>2:26:33</td></tr>
+        <tr><td>39</td><td>80</td><td>Finola </td><td>McNamara </td><td>Over40</td><td>0:58:42</td><td>1:03:23</td><td>0:10:09</td><td>0:05:36</td><td>0:09:51</td><td>2:27:41</td></tr>
+        <tr><td>40</td><td>102</td><td>Sue</td><td>Ramsbottom</td><td>Over40</td><td>0:58:45</td><td>1:03:17</td><td>0:10:14</td><td>0:05:04</td><td>0:10:25</td><td>2:27:45</td></tr>
+        <tr><td>41</td><td>55</td><td>Michelle </td><td>Howard</td><td>Senior</td><td>0:57:56</td><td>1:05:52</td><td>0:09:57</td><td>0:04:52</td><td>0:09:16</td><td>2:27:53</td></tr>
+        <tr><td>42</td><td>59</td><td>Kara</td><td>Kavanagh</td><td>Over40</td><td>0:57:39</td><td>1:06:07</td><td>0:09:36</td><td>0:05:11</td><td>0:09:23</td><td>2:27:56</td></tr>
+        <tr><td>43</td><td>108</td><td>Cathy</td><td>Ruane</td><td>Over40</td><td>1:08:14</td><td>0:58:05</td><td>0:10:06</td><td>0:04:17</td><td>0:09:06</td><td>2:29:48</td></tr>
+        <tr><td>44</td><td>103</td><td>Lyndsey</td><td>Rankin</td><td>Senior</td><td>1:15:22</td><td>0:50:23</td><td>0:10:43</td><td>0:04:14</td><td>0:09:11</td><td>2:29:53</td></tr>
+        <tr><td>45</td><td>99</td><td>Eimear</td><td>O'Looney</td><td>Senior</td><td>1:01:16</td><td>1:02:27</td><td>0:10:22</td><td>0:06:29</td><td>0:09:39</td><td>2:30:13</td></tr>
+        <tr><td>46</td><td>19</td><td>Nessa</td><td>Cosgrove</td><td>Over40</td><td>1:04:37</td><td>1:00:49</td><td>0:11:06</td><td>0:04:43</td><td>0:09:19</td><td>2:30:34</td></tr>
+        <tr><td>47</td><td>30</td><td>roisin</td><td>egan</td><td>Senior</td><td>0:58:03</td><td>1:08:41</td><td>0:10:44</td><td>0:04:40</td><td>0:09:28</td><td>2:31:36</td></tr>
+        <tr><td>48</td><td>67</td><td>Jade</td><td>Maloney </td><td>Senior</td><td>0:54:39</td><td>1:04:24</td><td>0:14:32</td><td>0:08:26</td><td>0:09:57</td><td>2:31:58</td></tr>
+        <tr><td>49</td><td>81</td><td>Lorna</td><td>McNicholas</td><td>Over40</td><td>1:01:09</td><td>1:03:05</td><td>0:10:56</td><td>0:06:45</td><td>0:10:05</td><td>2:32:00</td></tr>
+        <tr><td>50</td><td>56</td><td>Ann</td><td>Hughes</td><td>Senior</td><td>0:57:32</td><td>1:10:44</td><td>0:09:16</td><td>0:04:33</td><td>0:10:18</td><td>2:32:23</td></tr>
+        <tr><td>51</td><td>9</td><td>Denise</td><td>Carroll</td><td>Senior</td><td>1:00:20</td><td>1:07:47</td><td>0:09:56</td><td>0:06:38</td><td>0:07:46</td><td>2:32:27</td></tr>
+        <tr><td>52</td><td>5</td><td>Harriet</td><td>Browne</td><td>Senior</td><td>1:00:52</td><td>1:02:45</td><td>0:11:58</td><td>0:05:45</td><td>0:11:10</td><td>2:32:30</td></tr>
+        <tr><td>53</td><td>10</td><td>Siobhan</td><td>Caulfield</td><td>Senior</td><td>0:59:09</td><td>1:09:46</td><td>0:10:29</td><td>0:05:32</td><td>0:08:59</td><td>2:33:55</td></tr>
+        <tr><td>54</td><td>61</td><td>Michelle</td><td>Killian</td><td>Over40</td><td>0:44:59</td><td>1:27:36</td><td>0:08:07</td><td>0:06:04</td><td>0:07:39</td><td>2:34:25</td></tr>
+        <tr><td>55</td><td>49</td><td>Ruth</td><td>Griffin</td><td>Over40</td><td>1:00:49</td><td>1:06:52</td><td>0:11:35</td><td>0:05:43</td><td>0:10:31</td><td>2:35:30</td></tr>
+        <tr><td>56</td><td>32</td><td>Elizabeth</td><td>Feeney</td><td>Over40</td><td>1:03:51</td><td>1:03:30</td><td>0:11:29</td><td>0:06:14</td><td>0:10:50</td><td>2:35:54</td></tr>
+        <tr><td>57</td><td>106</td><td>Mary</td><td>Rice</td><td>Over50</td><td>1:01:02</td><td>1:12:38</td><td>0:09:32</td><td>0:04:12</td><td>0:08:38</td><td>2:36:02</td></tr>
+        <tr><td>58</td><td>199</td><td>Kirsten</td><td>Rice</td><td>Senior</td><td>1:01:05</td><td>1:12:28</td><td>0:09:46</td><td>0:04:06</td><td>0:08:39</td><td>2:36:04</td></tr>
+        <tr><td>59</td><td>114</td><td>Jean</td><td>Wynne</td><td>Over40</td><td>1:00:46</td><td>1:09:17</td><td>0:11:10</td><td>0:05:16</td><td>0:09:48</td><td>2:36:17</td></tr>
+        <tr><td>60</td><td>53</td><td>Wendy</td><td>Hickey</td><td>Over40</td><td>1:00:55</td><td>1:09:06</td><td>0:11:12</td><td>0:05:18</td><td>0:10:12</td><td>2:36:43</td></tr>
+        <tr><td>61</td><td>46</td><td>Catherine</td><td>Glasheen</td><td>Senior</td><td>1:05:36</td><td>1:05:57</td><td>0:11:59</td><td>0:05:37</td><td>0:08:07</td><td>2:37:16</td></tr>
+        <tr><td>62</td><td>89</td><td>Kathryn </td><td>O connor </td><td>Senior</td><td>1:02:12</td><td>1:07:32</td><td>0:09:43</td><td>0:06:50</td><td>0:11:05</td><td>2:37:22</td></tr>
+        <tr><td>63</td><td>87</td><td>Sarah</td><td>O Connor</td><td>Senior</td><td>1:02:55</td><td>1:06:52</td><td>0:12:50</td><td>0:03:43</td><td>0:11:04</td><td>2:37:24</td></tr>
+        <tr><td>64</td><td>2</td><td>Caitriona</td><td>Beirne</td><td>Senior</td><td>1:03:30</td><td>1:07:21</td><td>0:12:40</td><td>0:05:38</td><td>0:10:09</td><td>2:39:18</td></tr>
+        <tr><td>65</td><td>115</td><td>Geraldine</td><td>Daly </td><td>Over40</td><td>1:02:41</td><td>1:12:51</td><td>0:10:36</td><td>0:04:18</td><td>0:09:39</td><td>2:40:05</td></tr>
+        <tr><td>66</td><td>84</td><td>Maire</td><td>Morkan</td><td>Senior</td><td>1:05:11</td><td>1:07:35</td><td>0:12:57</td><td>0:04:45</td><td>0:11:28</td><td>2:41:56</td></tr>
+        <tr><td>67</td><td>128</td><td></td><td></td><td></td><td>1:02:36</td><td>1:13:14</td><td>0:11:31</td><td>0:04:57</td><td>0:10:22</td><td>2:42:40</td></tr>
+        <tr><td>68</td><td>117</td><td>Sarah</td><td>Healy</td><td>Senior</td><td>0:59:26</td><td>1:19:10</td><td>0:10:08</td><td>0:04:42</td><td>0:09:30</td><td>2:42:56</td></tr>
+        <tr><td>69</td><td>39</td><td>Stacey</td><td>Friel</td><td>Senior</td><td>1:00:59</td><td>1:17:34</td><td>0:10:09</td><td>0:04:46</td><td>0:09:31</td><td>2:42:59</td></tr>
+        <tr><td>70</td><td>76</td><td>Briege</td><td>McCrossan</td><td>Senior</td><td>1:05:22</td><td>1:08:34</td><td>0:13:54</td><td>0:04:34</td><td>0:10:44</td><td>2:43:08</td></tr>
+        <tr><td>71</td><td>47</td><td>Patricia</td><td>Graham</td><td>Senior</td><td>1:05:08</td><td>1:08:50</td><td>0:13:50</td><td>0:04:34</td><td>0:10:46</td><td>2:43:08</td></tr>
+        <tr><td>72</td><td>37</td><td>Cathy</td><td>Flinn</td><td>Senior</td><td>1:07:44</td><td>1:08:17</td><td>0:12:08</td><td>0:04:53</td><td>0:11:18</td><td>2:44:20</td></tr>
+        <tr><td>73</td><td>26</td><td>Eimear</td><td>Degan</td><td>Senior</td><td>1:07:41</td><td>1:08:17</td><td>0:12:14</td><td>0:04:49</td><td>0:11:19</td><td>2:44:20</td></tr>
+        <tr><td>74</td><td>28</td><td>Eilis </td><td>Doyle</td><td>Over40</td><td>1:04:33</td><td>1:12:48</td><td>0:11:35</td><td>0:05:52</td><td>0:10:55</td><td>2:45:43</td></tr>
+        <tr><td>75</td><td>96</td><td>Karen</td><td>O'Connor</td><td>Over50</td><td>1:13:36</td><td>1:02:27</td><td>0:12:37</td><td>0:05:53</td><td>0:11:20</td><td>2:45:53</td></tr>
+        <tr><td>76</td><td>6</td><td>Yvonne </td><td>Bruce </td><td>Over40</td><td>1:13:34</td><td>1:02:37</td><td>0:12:34</td><td>0:05:51</td><td>0:11:19</td><td>2:45:55</td></tr>
+        <tr><td>77</td><td>13</td><td>Helen</td><td>Colleran</td><td>Senior</td><td>1:03:57</td><td>1:16:03</td><td>0:13:45</td><td>0:05:24</td><td>0:09:15</td><td>2:48:24</td></tr>
+        <tr><td>78</td><td>12</td><td>Martina</td><td>Colleran</td><td>Over40</td><td>1:04:01</td><td>1:16:03</td><td>0:13:45</td><td>0:05:19</td><td>0:09:18</td><td>2:48:26</td></tr>
+        <tr><td>79</td><td>3</td><td>Pamela</td><td>Boyle</td><td>Senior</td><td>1:01:41</td><td>1:15:45</td><td>0:11:58</td><td>0:05:35</td><td>0:14:03</td><td>2:49:02</td></tr>
+        <tr><td>80</td><td>94</td><td>Deborah </td><td>O'Connor</td><td>Senior</td><td>1:14:25</td><td>1:00:40</td><td>0:16:28</td><td>0:06:10</td><td>0:12:59</td><td>2:50:42</td></tr>
+        <tr><td>81</td><td>121</td><td>Johanna</td><td>Medley</td><td>Over50</td><td>1:13:58</td><td>1:12:24</td><td>0:13:44</td><td>0:04:25</td><td>0:10:28</td><td>2:54:59</td></tr>
+        <tr><td>82</td><td>120</td><td>Alannah</td><td>Medley</td><td>Senior</td><td>1:13:56</td><td>1:12:28</td><td>0:13:15</td><td>0:04:53</td><td>0:10:30</td><td>2:55:02</td></tr>
+        <tr><td>83</td><td>1</td><td>mandy</td><td>arnold</td><td>Over40</td><td>1:21:40</td><td>1:02:26</td><td>0:14:19</td><td>0:06:17</td><td>0:12:34</td><td>2:57:16</td></tr>
+        <tr><td>84</td><td>112</td><td>Jennifer </td><td>Walsh</td><td>Senior</td><td>0:58:22</td><td>1:39:31</td><td>0:10:29</td><td>0:04:36</td><td>0:08:08</td><td>3:01:06</td></tr>
+        <tr><td>85</td><td>119</td><td>Sophie </td><td>McAdam</td><td>Senior</td><td>1:06:34</td><td>1:26:26</td><td>0:11:51</td><td>0:05:49</td><td>0:10:35</td><td>3:01:15</td></tr>
+        <tr><td>86</td><td>41</td><td>Aifric</td><td>Gallagher</td><td>Senior</td><td>1:05:26</td><td>1:27:36</td><td>0:12:29</td><td>0:05:15</td><td>0:10:32</td><td>3:01:18</td></tr>
+        <tr><td>87</td><td>50</td><td>Emma</td><td>Heavin</td><td>Senior</td><td>1:15:20</td><td>1:15:36</td><td>0:14:36</td><td>0:07:49</td><td>0:12:10</td><td>3:05:31</td></tr>
+        <tr><td>88</td><td>31</td><td>Thelma</td><td>Egan</td><td>Senior</td><td>1:11:16</td><td>1:27:10</td><td>0:15:10</td><td>0:05:02</td><td>0:11:34</td><td>3:10:12</td></tr>
+        <tr><td>89</td><td>86</td><td>Jessica </td><td>Newman</td><td>Senior</td><td>1:11:14</td><td>1:27:08</td><td>0:15:12</td><td>0:05:04</td><td>0:11:37</td><td>3:10:15</td></tr>
+        <tr><td>90</td><td>90</td><td>Brigid</td><td>O Gorman</td><td>Senior</td><td>1:21:36</td><td>1:14:53</td><td>0:15:13</td><td>0:08:44</td><td>0:10:23</td><td>3:10:49</td></tr>
+        <tr><td>91</td><td>38</td><td>Lisa</td><td>Fox</td><td>Senior</td><td>1:15:59</td><td>1:26:35</td><td>0:14:38</td><td>0:12:36</td><td>0:11:18</td><td>3:21:06</td></tr>
+        <tr><td>92</td><td>24</td><td>Deborah </td><td>Cullen</td><td>Senior</td><td>1:09:54</td><td>1:40:13</td><td>0:13:15</td><td>0:08:11</td><td>0:11:49</td><td>3:23:22</td></tr>
+        <tr><td>93</td><td>93</td><td>Sandra</td><td>O' Reilly</td><td>Over40</td><td>1:09:51</td><td>1:40:00</td><td>0:13:35</td><td>0:08:05</td><td>0:11:53</td><td>3:23:24</td></tr>
+        <tr><td>999</td><td>60</td><td>Sharon</td><td>Kelly</td><td>Over40</td><td>1:00:03</td><td>0:51:56</td><td>0:00:43</td><td></td><td></td><td>DNF</td></tr>
 
-			<tbody>
-				<tr><td>1</td><td>100</td><td>Noleen </td><td>O'Neill</td><td>Over40</td><td>0:48:08</td><td>0:51:10</td><td>0:07:47</td><td>0:04:05</td><td>0:06:59</td><td>1:58:09</td></tr>
-				<tr><td>2</td><td>43</td><td>Caroline</td><td>Gibbons</td><td>Senior</td><td>0:47:55</td><td>0:52:59</td><td>0:07:08</td><td>0:04:14</td><td>0:06:46</td><td>1:59:02</td></tr>
-				<tr><td>3</td><td>75</td><td>Amy</td><td>McCarter</td><td>Senior</td><td>0:51:54</td><td>0:48:55</td><td>0:08:37</td><td>0:03:41</td><td>0:07:28</td><td>2:00:35</td></tr>
-				<tr><td>4</td><td>105</td><td>Siobhan</td><td>Reynolds</td><td>Over40</td><td>0:50:42</td><td>0:50:09</td><td>0:08:37</td><td>0:03:40</td><td>0:07:47</td><td>2:00:55</td></tr>
-				<tr><td>5</td><td>52</td><td>Marcella</td><td>Heneghan</td><td>Over40</td><td>0:46:28</td><td>0:56:29</td><td>0:07:51</td><td>0:03:39</td><td>0:06:45</td><td>2:01:12</td></tr>
-				<tr><td>6</td><td>66</td><td>Janette</td><td>Maguire</td><td>Senior</td><td>0:50:07</td><td>0:53:16</td><td>0:08:26</td><td>0:04:05</td><td>0:06:54</td><td>2:02:48</td></tr>
-				<tr><td>7</td><td>25</td><td>Roisin</td><td>Daly</td><td>Senior</td><td>0:52:05</td><td>0:50:32</td><td>0:08:16</td><td>0:04:28</td><td>0:07:44</td><td>2:03:05</td></tr>
-				<tr><td>8</td><td>97</td><td>Kate</td><td>O'flynn </td><td>Senior</td><td>0:50:30</td><td>0:53:40</td><td>0:08:21</td><td>0:03:21</td><td>0:07:43</td><td>2:03:35</td></tr>
-				<tr><td>9</td><td>45</td><td>Claire </td><td>Gillespie </td><td>Senior</td><td>0:50:33</td><td>0:53:33</td><td>0:08:23</td><td>0:03:25</td><td>0:07:43</td><td>2:03:37</td></tr>
-				<tr><td>10</td><td>57</td><td>Fiona </td><td>Hyland</td><td>Senior</td><td>0:51:20</td><td>0:51:24</td><td>0:08:58</td><td>0:04:17</td><td>0:08:02</td><td>2:04:01</td></tr>
-				<tr><td>11</td><td>125</td><td>Melissa</td><td>Kelly</td><td>Over40</td><td>0:49:52</td><td>0:54:36</td><td>0:08:19</td><td>0:05:34</td><td>0:07:43</td><td>2:06:04</td></tr>
-				<tr><td>12</td><td>71</td><td>leone</td><td>marron</td><td>Senior</td><td>0:51:23</td><td>0:55:16</td><td>0:08:35</td><td>0:04:34</td><td>0:08:07</td><td>2:07:55</td></tr>
-				<tr><td>13</td><td>111</td><td>Claire</td><td>Scully</td><td>Over40</td><td>0:53:24</td><td>0:54:26</td><td>0:08:45</td><td>0:04:21</td><td>0:07:46</td><td>2:08:42</td></tr>
-				<tr><td>14</td><td>11</td><td>Deirdre</td><td>Clarke</td><td>Senior</td><td>0:54:42</td><td>0:53:12</td><td>0:08:45</td><td>0:04:20</td><td>0:08:30</td><td>2:09:29</td></tr>
-				<tr><td>15</td><td>98</td><td>Claire</td><td>O'Grady</td><td>Senior</td><td>0:50:35</td><td>1:01:31</td><td>0:08:41</td><td>0:04:46</td><td>0:07:09</td><td>2:12:42</td></tr>
-				<tr><td>16</td><td>92</td><td>Aoife</td><td>O Malley</td><td>Senior</td><td>0:53:22</td><td>0:59:23</td><td>0:08:48</td><td>0:03:59</td><td>0:07:58</td><td>2:13:30</td></tr>
-				<tr><td>17</td><td>69</td><td>Kaidi</td><td>Mannik</td><td>Senior</td><td>0:55:14</td><td>0:56:55</td><td>0:08:39</td><td>0:05:08</td><td>0:07:43</td><td>2:13:39</td></tr>
-				<tr><td>18</td><td>91</td><td>Aoife</td><td>O Hara</td><td>Senior</td><td>0:56:00</td><td>0:56:16</td><td>0:09:14</td><td>0:04:00</td><td>0:08:12</td><td>2:13:42</td></tr>
-				<tr><td>19</td><td>33</td><td>Kate</td><td>Fitzgerald</td><td>Over40</td><td>0:53:27</td><td>0:58:44</td><td>0:09:16</td><td>0:04:49</td><td>0:07:32</td><td>2:13:48</td></tr>
-				<tr><td>20</td><td>123</td><td>Nikola</td><td>Chromeckova</td><td>Senior</td><td>0:56:34</td><td>0:53:35</td><td>0:10:24</td><td>0:04:31</td><td>0:09:05</td><td>2:14:09</td></tr>
-				<tr><td>21</td><td>79</td><td>Leona</td><td>McLoughlin</td><td>Senior</td><td>0:51:26</td><td>1:00:48</td><td>0:09:09</td><td>0:04:58</td><td>0:07:59</td><td>2:14:20</td></tr>
-				<tr><td>22</td><td>44</td><td>Nicole</td><td>Gibbs </td><td>Senior</td><td>0:53:01</td><td>1:00:39</td><td>0:09:10</td><td>0:03:35</td><td>0:08:16</td><td>2:14:41</td></tr>
-				<tr><td>23</td><td>124</td><td>Ewelina</td><td>Dzikowska</td><td>Senior</td><td>0:53:40</td><td>0:58:23</td><td>0:10:38</td><td>0:03:38</td><td>0:09:28</td><td>2:15:47</td></tr>
-				<tr><td>24</td><td>21</td><td>Patricia </td><td>Coyle</td><td>Over40</td><td>1:00:54</td><td>0:53:58</td><td>0:09:18</td><td>0:04:08</td><td>0:07:33</td><td>2:15:51</td></tr>
-				<tr><td>25</td><td>8</td><td>Kelly Ann</td><td>Carney</td><td>Senior</td><td>0:51:33</td><td>1:02:55</td><td>0:09:07</td><td>0:04:57</td><td>0:07:29</td><td>2:16:01</td></tr>
-				<tr><td>26</td><td>36</td><td>Rebecca</td><td>Flanagan</td><td>Senior</td><td>0:51:41</td><td>1:02:45</td><td>0:09:13</td><td>0:05:06</td><td>0:07:37</td><td>2:16:22</td></tr>
-				<tr><td>27</td><td>51</td><td>Claire </td><td>Heffernan</td><td>Over40</td><td>0:59:13</td><td>0:54:44</td><td>0:10:02</td><td>0:04:19</td><td>0:09:57</td><td>2:18:15</td></tr>
-				<tr><td>28</td><td>58</td><td>Aoife </td><td>Kavanagh</td><td>Senior</td><td>0:56:36</td><td>0:57:54</td><td>0:12:18</td><td>0:06:23</td><td>0:08:48</td><td>2:21:59</td></tr>
-				<tr><td>29</td><td>20</td><td>Sarah</td><td>Costello</td><td>Senior</td><td>0:57:16</td><td>1:00:50</td><td>0:10:09</td><td>0:05:06</td><td>0:08:40</td><td>2:22:01</td></tr>
-				<tr><td>30</td><td>72</td><td>Aisling</td><td>Martyn</td><td>Senior</td><td>0:53:42</td><td>1:06:36</td><td>0:10:05</td><td>0:04:20</td><td>0:07:56</td><td>2:22:39</td></tr>
-				<tr><td>31</td><td>7</td><td>Julia</td><td>Calderwood</td><td>Senior</td><td>0:59:51</td><td>0:59:23</td><td>0:09:56</td><td>0:04:28</td><td>0:09:06</td><td>2:22:44</td></tr>
-				<tr><td>32</td><td>110</td><td>Danielle</td><td>Scally</td><td>Senior</td><td>0:57:20</td><td>1:02:11</td><td>0:10:20</td><td>0:04:34</td><td>0:08:39</td><td>2:23:04</td></tr>
-				<tr><td>33</td><td>126</td><td>Tracy</td><td>McLoughlin</td><td>Senior</td><td>0:59:31</td><td>0:59:37</td><td>0:10:45</td><td>0:04:42</td><td>0:08:40</td><td>2:23:15</td></tr>
-				<tr><td>34</td><td>18</td><td>SIle</td><td>Corish</td><td>Over40</td><td>1:01:25</td><td>0:54:29</td><td>0:12:23</td><td>0:05:17</td><td>0:10:18</td><td>2:23:52</td></tr>
-				<tr><td>35</td><td>17</td><td>sinead</td><td>corbett</td><td>Senior</td><td>0:57:14</td><td>1:02:12</td><td>0:10:36</td><td>0:04:40</td><td>0:09:17</td><td>2:23:59</td></tr>
-				<tr><td>36</td><td>116</td><td>Tara</td><td>Healy</td><td>Over40</td><td>0:56:39</td><td>1:06:44</td><td>0:08:30</td><td>0:06:01</td><td>0:07:46</td><td>2:25:40</td></tr>
-				<tr><td>37</td><td>14</td><td>Grainne </td><td>Connaire </td><td>Senior</td><td>0:50:38</td><td>1:11:53</td><td>0:09:31</td><td>0:05:47</td><td>0:08:06</td><td>2:25:55</td></tr>
-				<tr><td>38</td><td>63</td><td>Sofia</td><td>Lasson</td><td>Senior</td><td>1:00:05</td><td>1:00:27</td><td>0:10:25</td><td></td><td>0:15:36</td><td>2:26:33</td></tr>
-				<tr><td>39</td><td>80</td><td>Finola </td><td>McNamara </td><td>Over40</td><td>0:58:42</td><td>1:03:23</td><td>0:10:09</td><td>0:05:36</td><td>0:09:51</td><td>2:27:41</td></tr>
-				<tr><td>40</td><td>102</td><td>Sue</td><td>Ramsbottom</td><td>Over40</td><td>0:58:45</td><td>1:03:17</td><td>0:10:14</td><td>0:05:04</td><td>0:10:25</td><td>2:27:45</td></tr>
-				<tr><td>41</td><td>55</td><td>Michelle </td><td>Howard</td><td>Senior</td><td>0:57:56</td><td>1:05:52</td><td>0:09:57</td><td>0:04:52</td><td>0:09:16</td><td>2:27:53</td></tr>
-				<tr><td>42</td><td>59</td><td>Kara</td><td>Kavanagh</td><td>Over40</td><td>0:57:39</td><td>1:06:07</td><td>0:09:36</td><td>0:05:11</td><td>0:09:23</td><td>2:27:56</td></tr>
-				<tr><td>43</td><td>108</td><td>Cathy</td><td>Ruane</td><td>Over40</td><td>1:08:14</td><td>0:58:05</td><td>0:10:06</td><td>0:04:17</td><td>0:09:06</td><td>2:29:48</td></tr>
-				<tr><td>44</td><td>103</td><td>Lyndsey</td><td>Rankin</td><td>Senior</td><td>1:15:22</td><td>0:50:23</td><td>0:10:43</td><td>0:04:14</td><td>0:09:11</td><td>2:29:53</td></tr>
-				<tr><td>45</td><td>99</td><td>Eimear</td><td>O'Looney</td><td>Senior</td><td>1:01:16</td><td>1:02:27</td><td>0:10:22</td><td>0:06:29</td><td>0:09:39</td><td>2:30:13</td></tr>
-				<tr><td>46</td><td>19</td><td>Nessa</td><td>Cosgrove</td><td>Over40</td><td>1:04:37</td><td>1:00:49</td><td>0:11:06</td><td>0:04:43</td><td>0:09:19</td><td>2:30:34</td></tr>
-				<tr><td>47</td><td>30</td><td>roisin</td><td>egan</td><td>Senior</td><td>0:58:03</td><td>1:08:41</td><td>0:10:44</td><td>0:04:40</td><td>0:09:28</td><td>2:31:36</td></tr>
-				<tr><td>48</td><td>67</td><td>Jade</td><td>Maloney </td><td>Senior</td><td>0:54:39</td><td>1:04:24</td><td>0:14:32</td><td>0:08:26</td><td>0:09:57</td><td>2:31:58</td></tr>
-				<tr><td>49</td><td>81</td><td>Lorna</td><td>McNicholas</td><td>Over40</td><td>1:01:09</td><td>1:03:05</td><td>0:10:56</td><td>0:06:45</td><td>0:10:05</td><td>2:32:00</td></tr>
-				<tr><td>50</td><td>56</td><td>Ann</td><td>Hughes</td><td>Senior</td><td>0:57:32</td><td>1:10:44</td><td>0:09:16</td><td>0:04:33</td><td>0:10:18</td><td>2:32:23</td></tr>
-				<tr><td>51</td><td>9</td><td>Denise</td><td>Carroll</td><td>Senior</td><td>1:00:20</td><td>1:07:47</td><td>0:09:56</td><td>0:06:38</td><td>0:07:46</td><td>2:32:27</td></tr>
-				<tr><td>52</td><td>5</td><td>Harriet</td><td>Browne</td><td>Senior</td><td>1:00:52</td><td>1:02:45</td><td>0:11:58</td><td>0:05:45</td><td>0:11:10</td><td>2:32:30</td></tr>
-				<tr><td>53</td><td>10</td><td>Siobhan</td><td>Caulfield</td><td>Senior</td><td>0:59:09</td><td>1:09:46</td><td>0:10:29</td><td>0:05:32</td><td>0:08:59</td><td>2:33:55</td></tr>
-				<tr><td>54</td><td>61</td><td>Michelle</td><td>Killian</td><td>Over40</td><td>0:44:59</td><td>1:27:36</td><td>0:08:07</td><td>0:06:04</td><td>0:07:39</td><td>2:34:25</td></tr>
-				<tr><td>55</td><td>49</td><td>Ruth</td><td>Griffin</td><td>Over40</td><td>1:00:49</td><td>1:06:52</td><td>0:11:35</td><td>0:05:43</td><td>0:10:31</td><td>2:35:30</td></tr>
-				<tr><td>56</td><td>32</td><td>Elizabeth</td><td>Feeney</td><td>Over40</td><td>1:03:51</td><td>1:03:30</td><td>0:11:29</td><td>0:06:14</td><td>0:10:50</td><td>2:35:54</td></tr>
-				<tr><td>57</td><td>106</td><td>Mary</td><td>Rice</td><td>Over50</td><td>1:01:02</td><td>1:12:38</td><td>0:09:32</td><td>0:04:12</td><td>0:08:38</td><td>2:36:02</td></tr>
-				<tr><td>58</td><td>199</td><td>Kirsten</td><td>Rice</td><td>Senior</td><td>1:01:05</td><td>1:12:28</td><td>0:09:46</td><td>0:04:06</td><td>0:08:39</td><td>2:36:04</td></tr>
-				<tr><td>59</td><td>114</td><td>Jean</td><td>Wynne</td><td>Over40</td><td>1:00:46</td><td>1:09:17</td><td>0:11:10</td><td>0:05:16</td><td>0:09:48</td><td>2:36:17</td></tr>
-				<tr><td>60</td><td>53</td><td>Wendy</td><td>Hickey</td><td>Over40</td><td>1:00:55</td><td>1:09:06</td><td>0:11:12</td><td>0:05:18</td><td>0:10:12</td><td>2:36:43</td></tr>
-				<tr><td>61</td><td>46</td><td>Catherine</td><td>Glasheen</td><td>Senior</td><td>1:05:36</td><td>1:05:57</td><td>0:11:59</td><td>0:05:37</td><td>0:08:07</td><td>2:37:16</td></tr>
-				<tr><td>62</td><td>89</td><td>Kathryn </td><td>O connor </td><td>Senior</td><td>1:02:12</td><td>1:07:32</td><td>0:09:43</td><td>0:06:50</td><td>0:11:05</td><td>2:37:22</td></tr>
-				<tr><td>63</td><td>87</td><td>Sarah</td><td>O Connor</td><td>Senior</td><td>1:02:55</td><td>1:06:52</td><td>0:12:50</td><td>0:03:43</td><td>0:11:04</td><td>2:37:24</td></tr>
-				<tr><td>64</td><td>2</td><td>Caitriona</td><td>Beirne</td><td>Senior</td><td>1:03:30</td><td>1:07:21</td><td>0:12:40</td><td>0:05:38</td><td>0:10:09</td><td>2:39:18</td></tr>
-				<tr><td>65</td><td>115</td><td>Geraldine</td><td>Daly </td><td>Over40</td><td>1:02:41</td><td>1:12:51</td><td>0:10:36</td><td>0:04:18</td><td>0:09:39</td><td>2:40:05</td></tr>
-				<tr><td>66</td><td>84</td><td>Maire</td><td>Morkan</td><td>Senior</td><td>1:05:11</td><td>1:07:35</td><td>0:12:57</td><td>0:04:45</td><td>0:11:28</td><td>2:41:56</td></tr>
-				<tr><td>67</td><td>128</td><td></td><td></td><td></td><td>1:02:36</td><td>1:13:14</td><td>0:11:31</td><td>0:04:57</td><td>0:10:22</td><td>2:42:40</td></tr>
-				<tr><td>68</td><td>117</td><td>Sarah</td><td>Healy</td><td>Senior</td><td>0:59:26</td><td>1:19:10</td><td>0:10:08</td><td>0:04:42</td><td>0:09:30</td><td>2:42:56</td></tr>
-				<tr><td>69</td><td>39</td><td>Stacey</td><td>Friel</td><td>Senior</td><td>1:00:59</td><td>1:17:34</td><td>0:10:09</td><td>0:04:46</td><td>0:09:31</td><td>2:42:59</td></tr>
-				<tr><td>70</td><td>76</td><td>Briege</td><td>McCrossan</td><td>Senior</td><td>1:05:22</td><td>1:08:34</td><td>0:13:54</td><td>0:04:34</td><td>0:10:44</td><td>2:43:08</td></tr>
-				<tr><td>71</td><td>47</td><td>Patricia</td><td>Graham</td><td>Senior</td><td>1:05:08</td><td>1:08:50</td><td>0:13:50</td><td>0:04:34</td><td>0:10:46</td><td>2:43:08</td></tr>
-				<tr><td>72</td><td>37</td><td>Cathy</td><td>Flinn</td><td>Senior</td><td>1:07:44</td><td>1:08:17</td><td>0:12:08</td><td>0:04:53</td><td>0:11:18</td><td>2:44:20</td></tr>
-				<tr><td>73</td><td>26</td><td>Eimear</td><td>Degan</td><td>Senior</td><td>1:07:41</td><td>1:08:17</td><td>0:12:14</td><td>0:04:49</td><td>0:11:19</td><td>2:44:20</td></tr>
-				<tr><td>74</td><td>28</td><td>Eilis </td><td>Doyle</td><td>Over40</td><td>1:04:33</td><td>1:12:48</td><td>0:11:35</td><td>0:05:52</td><td>0:10:55</td><td>2:45:43</td></tr>
-				<tr><td>75</td><td>96</td><td>Karen</td><td>O'Connor</td><td>Over50</td><td>1:13:36</td><td>1:02:27</td><td>0:12:37</td><td>0:05:53</td><td>0:11:20</td><td>2:45:53</td></tr>
-				<tr><td>76</td><td>6</td><td>Yvonne </td><td>Bruce </td><td>Over40</td><td>1:13:34</td><td>1:02:37</td><td>0:12:34</td><td>0:05:51</td><td>0:11:19</td><td>2:45:55</td></tr>
-				<tr><td>77</td><td>13</td><td>Helen</td><td>Colleran</td><td>Senior</td><td>1:03:57</td><td>1:16:03</td><td>0:13:45</td><td>0:05:24</td><td>0:09:15</td><td>2:48:24</td></tr>
-				<tr><td>78</td><td>12</td><td>Martina</td><td>Colleran</td><td>Over40</td><td>1:04:01</td><td>1:16:03</td><td>0:13:45</td><td>0:05:19</td><td>0:09:18</td><td>2:48:26</td></tr>
-				<tr><td>79</td><td>3</td><td>Pamela</td><td>Boyle</td><td>Senior</td><td>1:01:41</td><td>1:15:45</td><td>0:11:58</td><td>0:05:35</td><td>0:14:03</td><td>2:49:02</td></tr>
-				<tr><td>80</td><td>94</td><td>Deborah </td><td>O'Connor</td><td>Senior</td><td>1:14:25</td><td>1:00:40</td><td>0:16:28</td><td>0:06:10</td><td>0:12:59</td><td>2:50:42</td></tr>
-				<tr><td>81</td><td>121</td><td>Johanna</td><td>Medley</td><td>Over50</td><td>1:13:58</td><td>1:12:24</td><td>0:13:44</td><td>0:04:25</td><td>0:10:28</td><td>2:54:59</td></tr>
-				<tr><td>82</td><td>120</td><td>Alannah</td><td>Medley</td><td>Senior</td><td>1:13:56</td><td>1:12:28</td><td>0:13:15</td><td>0:04:53</td><td>0:10:30</td><td>2:55:02</td></tr>
-				<tr><td>83</td><td>1</td><td>mandy</td><td>arnold</td><td>Over40</td><td>1:21:40</td><td>1:02:26</td><td>0:14:19</td><td>0:06:17</td><td>0:12:34</td><td>2:57:16</td></tr>
-				<tr><td>84</td><td>112</td><td>Jennifer </td><td>Walsh</td><td>Senior</td><td>0:58:22</td><td>1:39:31</td><td>0:10:29</td><td>0:04:36</td><td>0:08:08</td><td>3:01:06</td></tr>
-				<tr><td>85</td><td>119</td><td>Sophie </td><td>McAdam</td><td>Senior</td><td>1:06:34</td><td>1:26:26</td><td>0:11:51</td><td>0:05:49</td><td>0:10:35</td><td>3:01:15</td></tr>
-				<tr><td>86</td><td>41</td><td>Aifric</td><td>Gallagher</td><td>Senior</td><td>1:05:26</td><td>1:27:36</td><td>0:12:29</td><td>0:05:15</td><td>0:10:32</td><td>3:01:18</td></tr>
-				<tr><td>87</td><td>50</td><td>Emma</td><td>Heavin</td><td>Senior</td><td>1:15:20</td><td>1:15:36</td><td>0:14:36</td><td>0:07:49</td><td>0:12:10</td><td>3:05:31</td></tr>
-				<tr><td>88</td><td>31</td><td>Thelma</td><td>Egan</td><td>Senior</td><td>1:11:16</td><td>1:27:10</td><td>0:15:10</td><td>0:05:02</td><td>0:11:34</td><td>3:10:12</td></tr>
-				<tr><td>89</td><td>86</td><td>Jessica </td><td>Newman</td><td>Senior</td><td>1:11:14</td><td>1:27:08</td><td>0:15:12</td><td>0:05:04</td><td>0:11:37</td><td>3:10:15</td></tr>
-				<tr><td>90</td><td>90</td><td>Brigid</td><td>O Gorman</td><td>Senior</td><td>1:21:36</td><td>1:14:53</td><td>0:15:13</td><td>0:08:44</td><td>0:10:23</td><td>3:10:49</td></tr>
-				<tr><td>91</td><td>38</td><td>Lisa</td><td>Fox</td><td>Senior</td><td>1:15:59</td><td>1:26:35</td><td>0:14:38</td><td>0:12:36</td><td>0:11:18</td><td>3:21:06</td></tr>
-				<tr><td>92</td><td>24</td><td>Deborah </td><td>Cullen</td><td>Senior</td><td>1:09:54</td><td>1:40:13</td><td>0:13:15</td><td>0:08:11</td><td>0:11:49</td><td>3:23:22</td></tr>
-				<tr><td>93</td><td>93</td><td>Sandra</td><td>O' Reilly</td><td>Over40</td><td>1:09:51</td><td>1:40:00</td><td>0:13:35</td><td>0:08:05</td><td>0:11:53</td><td>3:23:24</td></tr>
-				<tr><td>999</td><td>60</td><td>Sharon</td><td>Kelly</td><td>Over40</td><td>1:00:03</td><td>0:51:56</td><td>0:00:43</td><td></td><td></td><td>DNF</td></tr>
-
-				</tbody>
-		</table>
-		</div>
+        </tbody>
+    </table>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+    <!-- Datatables -->
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.15/fh-3.1.2/r-2.1.1/datatables.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('#results').DataTable({
+          lengthChange: false,
+          pageLength: 250,
+          fixedHeader: {
+            header: true,
+          },
+          responsive: true,
+          columnDefs: [
+            { responsivePriority: 1, targets: 3 },
+            { responsivePriority: 2, targets: -1 }
+          ],
+        });
+      });
+    </script>
   </body>
 </html>
