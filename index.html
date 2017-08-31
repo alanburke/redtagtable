@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -20,7 +21,7 @@
         cursor: pointer;
       }
       tr.shown td.details-control {
-        text-align:center;
+        text-align:center; 
         color:red;
       }
     </style>
@@ -175,12 +176,12 @@
           ],
 
         });
-                                yadcf.init($results, [{
-                                        column_number : 4,
-                                }]);
+        yadcf.init($results, [{
+          column_number : 4,
+        }]);
 
       });
-                                // Add event listener for opening and closing details
+        // Add event listener for opening and closing details
          $('#results tbody').on('click', 'td.details-control', function () {
 
              var table = $('#results').DataTable();
@@ -203,10 +204,10 @@
                  tdi.first().addClass('fa-minus-square');
              }
          });
-
+        
     function format(d){
-                        console.log(d);
-
+      console.log(d);
+        
          // `d` is the original data object for the row
          return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
              '<tr>' +
@@ -217,7 +218,7 @@
                  '<td>Extra info:</td>' +
                  '<td>And any further details here (images etc)...</td>' +
              '</tr>' +
-         '</table>';
+         '</table>';  
     }
     </script>
   </body>
