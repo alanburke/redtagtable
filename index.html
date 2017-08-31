@@ -148,10 +148,11 @@
 
     <!-- Datatables -->
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.7/pdfmake-0.1.27/dt-1.10.15/b-1.4.0/b-colvis-1.4.0/b-html5-1.4.0/b-print-1.4.0/r-2.1.1/se-1.2.2/datatables.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.yadcf.js"></script>
 
     <script>
       $(document).ready(function(){
-        $('#results').DataTable({
+        $results =  $('#results').DataTable({
           lengthChange: false,
           pageLength: 250,
           fixedHeader: {
@@ -161,7 +162,7 @@
           columnDefs: [
             { responsivePriority: 1, targets: 3 },
             { responsivePriority: 2, targets: -1 },
-            { searchable: false, targets: [0,4,5,6,7,8,9]},
+//            { searchable: false, targets: [0,4,5,6,7,8,9]},
             { visible: false, targets: [5,6,7,8,9]}
           ],
           dom: 'Bfrtip',
@@ -172,7 +173,12 @@
                   columns: '.split',
               },
           ],
+
         });
+                                yadcf.init($results, [{
+                                        column_number : 4,
+                                }]);
+
       });
                                 // Add event listener for opening and closing details
          $('#results tbody').on('click', 'td.details-control', function () {
