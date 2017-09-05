@@ -176,9 +176,27 @@
           ],
 
         });
-        yadcf.init($results, [{
+        yadcf.init($results, [
+        {
+          column_number : 1,
+          filter_type: 'text',
+          filter_default_label: 'Search',
+          filter_match_mode: 'exact'
+        },
+        {
+          column_number : 2,
+          filter_type: 'text',
+          filter_default_label: 'Search',
+        },
+        {
+          column_number : 3,
+          filter_type: 'text',
+          filter_default_label: 'Search',
+        },
+        {
           column_number : 4,
-        }]);
+        },
+        ]);
 
       });
         // Add event listener for opening and closing details
