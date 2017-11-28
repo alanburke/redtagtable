@@ -7,12 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-        <!-- AB - This is used for the mini-icons in the show/hide section - works with bootstrap -->
+  <!-- AB - This is used for the mini-icons in the show/hide section - works with bootstrap -->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   
   <!-- Datatables -->
-        <!-- This is a custom builf of Datatables from https://datatables.net/download/index
-                         includes Styling: Bootstrap 3, Packages: jQuery 3, Bootstrap 3, DatabTables; Extensions: Buttons- Column Visibility, FixedColumns, FixedHeader,keyTable -->
+  <!-- This is a custom builf of Datatables from https://datatables.net/download/index
+       includes Styling: Bootstrap 3, Packages: jQuery 3, Bootstrap 3, DatabTables; Extensions: Buttons- Column Visibility, FixedColumns, FixedHeader,keyTable -->
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.7/dt-1.10.16/b-1.4.2/b-colvis-1.4.2/fc-3.2.3/fh-3.1.3/kt-2.3.2/datatables.min.css"/>
 
   <!-- custom style for the show extra icons-->
@@ -262,21 +262,21 @@
        }
      });
     
-                // This custom function returns the data to be shown.
-                function format(d){
+      // This custom function returns the data to be shown.
+      function format(d){
 
-                         // `d` is the original data object for the row
-                         return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
-                                 '<tr>' +
-                                         '<td>Full name: </td>' +
-                                         '<td>' + d[2] + ' ' +  d[3] +'</td>' +
-                                 '</tr>' +
-                                 '<tr>' +
-                                         '<td>Extra info:</td>' +
-                                         '<td>And any further details here (images etc)...</td>' +
-                                 '</tr>' +
-                         '</table>';
-                }
+               // `d` is the original data object for the row
+               return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+                       '<tr>' +
+                               '<td>Full name: </td>' +
+                               '<td>' + d[2] + ' ' +  d[3] +'</td>' +
+                       '</tr>' +
+                       '<tr>' +
+                               '<td>Extra info:</td>' +
+                               '<td>And any further details here (images etc)...</td>' +
+                       '</tr>' +
+               '</table>';
+      }
 
   </script>
   </body>
