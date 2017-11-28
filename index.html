@@ -164,61 +164,62 @@
 
   <script>
     $(document).ready(function(){
-			$results =  $('#results').DataTable({
-				lengthChange: false,
-				pageLength: 250,
-				fixedHeader: {
-					header: true,
-				},
-				responsive: true,
-				columnDefs: [
-					{ responsivePriority: 1, targets: 3 },
-					{ responsivePriority: 2, targets: -1 },
-					//{ searchable: false, targets: [0,4,5,6,7,8,9]},
-					{ visible: false, targets: [5,6,7,8,9]}
-				],
-				dom: 'Brtip',
-				// Custom function to adjust text and hide cols
-				buttons: [
-					{
-						extend: 'columnToggle',
-						text: 'Show Splits',
-						splitsShown: false,
-						columns: '.split',
-						action: function ( e, dt, node, config ) {
-							config.splitsShown = !config.splitsShown;
-							var text = 'Show Splits';
-							if (config.splitsShown){
-								var text = 'Hide Splits';
-							}
-							this.text( text );
-							dt.columns( '.split' ).visible( config.splitsShown );
-						},
-					},
-				],
-			});
+      $results =  $('#results').DataTable({
+        lengthChange: false,
+        pageLength: 250,
+        fixedHeader: {
+          header: true,
+        },
+        columnDefs: [
+          { visible: false, targets: [5,6,7,8,9]}
+        ],
+        dom: 'Brtip',
+        // Custom function to adjust text and hide cols
+        buttons: [
+          {
+            extend: 'columnToggle',
+            text: 'Show Splits',
+            splitsShown: false,
+            columns: '.split',
+            action: function ( e, dt, node, config ) {
+              config.splitsShown = !config.splitsShown;
+              var text = 'Show Splits';
+              if (config.splitsShown){
+                var text = 'Hide Splits';
+              }
+              this.text( text );
+              dt.columns( '.split' ).visible( config.splitsShown );
+            },
+          },
+        ],
+      });
 
-			yadcf.init($results, [
-				{
-					column_number : 1,
-					filter_type: 'text',
-					filter_default_label: 'Search',
-					filter_match_mode: 'exact'
-				},
-				{
-					column_number : 2,
-					filter_type: 'text',
-					filter_default_label: 'Search',
-				},
-				{
-					column_number : 3,
-					filter_type: 'text',
-					filter_default_label: 'Search',
-				},
-				{
-					column_number : 4,
-				},
-			]);
+      yadcf.init($results, [
+        {
+          column_number : 1,
+          filter_container_id: 'external_filter_container_1',
+          filter_type: 'text',
+          filter_default_label: 'Search Race Number',
+          filter_match_mode: 'exact'
+        },
+        {
+          column_number : 2,
+          filter_container_id: 'external_filter_container_2',
+          filter_type: 'text',
+          filter_default_label: 'Search First Name',
+        },
+        {
+          column_number : 3,
+          filter_container_id: 'external_filter_container_3',
+          filter_type: 'text',
+          filter_default_label: 'Search Last Name',
+        },
+        {
+          column_number : 4,
+          filter_container_id: 'external_filter_container_4',
+          filter_default_label: 'Category',
+        },
+      ]);
 
     });
 
